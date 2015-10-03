@@ -1,0 +1,92 @@
+
+Thanks to everyone for providing the great resources that let me make this project. If you would like your resource to be pulled from the project, or have other concerns, please contact me at:
+mikesdevemail@gmail.com
+
+----------Software included in the binary---------
+
+EWRP6 copyright (c) Mike Harris
+Licensed under GPL version 3.0
+
+lispbuilder-SDL
+Licensed under MIT license
+https://github.com/lispbuilder/lispbuilder
+
+lispbuilder-SDL-image
+Licensed under GNU Lesser General Public License Version 2.1
+
+cl-store
+Licensed under MIT license
+CL-STORE is a package originally written by Sean Ross for serializing and deserializing CL objects from streams.
+It is maintained by Leslie P. Polzer and Brit Butler.
+https://common-lisp.net/project/cl-store/
+
+SBCL
+http://www.sbcl.org/
+Some of the files in SBCL have a BSD-style license requiring that credit be given to the institutions which owned the copyright to the original versions: Xerox, Inc., the Massachusetts Institute of Technology, Symbolics, Inc., and Gerd Moellmann. See:
+http://sourceforge.net/p/sbcl/sbcl/ci/master/tree/COPYING
+http://sourceforge.net/p/sbcl/sbcl/ci/master/tree/CREDITS
+
+
+
+----------Graphics------------
+
+Grassland tile:
+Author: Pavel Kazachkov
+Cropped and resized to 50x50 pixels from the version at:
+https://commons.wikimedia.org/wiki/File:Altai_mountains_aerial_(6073000839).jpg
+Licensed under CC 2.0 generic:
+https://creativecommons.org/licenses/by/2.0/deed.en
+
+Forest tile:
+Author: L. Shyamal
+Cropped and resized to 50x50 pixels from the version at:
+https://commons.wikimedia.org/wiki/File:ForestCanopyNilgiris.jpg
+Licensed under CC 3.0 unported
+https://creativecommons.org/licenses/by-sa/3.0/deed.en
+
+Desert tile:
+Author: Eric Bézine
+Cropped and resized to 50x50 pixels from the version at:
+https://commons.wikimedia.org/wiki/File:Sossusvlei2009jul.jpg
+Licensed under CC 3.0 unported
+https://creativecommons.org/licenses/by-sa/3.0/deed.en
+
+Ocean tile:
+Author: Elph
+Cropped and resized to 50x50 pixels from the version at:
+https://commons.wikimedia.org/wiki/File:Clouds_over_Indian_Ocean_2.JPG
+Public domain
+
+Hill tile 1:
+Author: Pavel Kazachkov
+Cropped and resized to 50x50 pixels from the version at:
+https://commons.wikimedia.org/wiki/File:Altai_mountains_aerial_(6073000449).jpg
+Licensed under CC 2.0 generic:
+https://creativecommons.org/licenses/by/2.0/deed.en
+
+Hill tile 2:
+From U.S. Fish and Wildlife Service
+Public domain
+Cropped and resized to 50x50 pixels from the version at:
+https://commons.wikimedia.org/wiki/File:White_mountain_landscape.jpg
+
+Mountain tile 1:
+Author: Tola Akindipe
+Cropped and resized to 50x50 pixels from the version at:
+https://commons.wikimedia.org/wiki/File:Atlas_Mountain_range.jpg
+Licensed under CC 4.0 International:
+https://creativecommons.org/licenses/by-sa/4.0/deed.en
+
+Mountain tile 2:
+Copyright (c) Kogo
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License" at
+https://commons.wikimedia.org/wiki/Commons:GNU_Free_Documentation_License,_version_1.2
+Cropped and resized to 50x50 pixels from the version at:
+https://commons.wikimedia.org/wiki/File:Trango_Towers_2.jpg
+
+

@@ -1,6 +1,6 @@
 #Endangered Wildlife Reserve Planet 6
 
-* An idle, desktop, minimal graphics, strategy game. Currently in the demo phase. *
+*An idle, desktop, minimal graphics, strategy game. Currently in the demo phase.*
 
 ##Requirements to run binary
 * SDL 1.2 and SDL image

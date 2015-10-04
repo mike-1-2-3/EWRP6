@@ -19,7 +19,7 @@
 
 ;; Eventually, the user will input these at world gen or in a file
 
-(defconstant +seconds-per-tick+ 30) ;; 1 min = 1 hr, for now
+(defconstant +seconds-per-tick+ 20) ;; 1 min = 1 hr, for now
 (defconstant +tick-processing-interval+ 1) ;;adjust to avoid freezes while you're doing stuff
 (defconstant +map-size+ 100)
 (defconstant +default-screen-width+ 640)

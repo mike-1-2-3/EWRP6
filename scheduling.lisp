@@ -50,8 +50,6 @@
   (dolist (group (sentients-list place))
     (let ((population (quantity group)))
       (dotimes (i (- +total-nutrients+ 2))
-	(print (aref (nutrition-needs (get-population-type group)) i))
-	(print (< 0 (aref (nutrition-needs (get-population-type group)) i)))
 	(when (< 0 (aref (nutrition-needs (get-population-type group)) i))
 	  (let* ((aff (aref (affliction-array *the-world*) i))
 		 (need (* population (aref (nutrition-needs (get-population-type group)) i)))
@@ -66,8 +64,7 @@
 			(if (> d 0)
 			    (deaths (random d) group place))))))
 	    (if (>= msg-index 0)
-		(push (list i msg-index) (afflictions-list place))))))
-      (print (afflictions-list place)))))
+		(push (list i msg-index) (afflictions-list place)))))))))
 
 ;;---------------------- labor
 

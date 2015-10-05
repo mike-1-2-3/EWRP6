@@ -1,0 +1,8 @@
+9
+0
+save/save1.sav
+
+
+The first line is seconds between tick.
+The second line is fog of war: 0 is off, 1 is visible, 2 is visible and details known.
+Third line is save file name.

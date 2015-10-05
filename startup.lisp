@@ -21,7 +21,6 @@
 (ql:quickload "lispbuilder-sdl-image")
 (ql:quickload "cl-store")  
 
-
 (defun setup-world ()
   (if (equalp nil (probe-file *save-directory*))
       (progn
@@ -48,10 +47,10 @@
 
 
 (defun load-all ()
-  (load "config.lisp")
+
   (load "index-constants.lisp")
   (load "interfaces/sdl-interface.lisp")
-  (load "data/generics.lisp" :verbose nil)
+  (load "generics.lisp" :verbose nil)
   ;; load various classes
   (load "interfaces/menu.lisp")
   (load "data/plants.lisp" :verbose nil)
@@ -62,7 +61,7 @@
   (load "data/world.lisp" :verbose nil)
   (load "data/goods.lisp")
   ;; load the rest of the code
-  (load "data/jobs.lisp" :verbose nil) 
+  (load "jobs.lisp" :verbose nil) 
   (load "scheduling.lisp" :verbose nil)
   
   (load "data/plants-instances.lisp")
@@ -76,13 +75,33 @@
   (load "interfaces/menu-instances.lisp")
   (load "interfaces/states.lisp"))
 
+(defun make-bin ()
+  (load-all)
+  (save-lisp-and-die "EWRP6" :toplevel #'start-game :executable t))
+
+(defun read-config ()
+  (let ((config (open "config.txt")))
+    (defparameter *seconds-per-tick* (parse-integer (read-line config)))
+    (defparameter *fog-of-war* (parse-integer (read-line config)))
+    (defparameter *save-directory* (read-line config))
+    (close config)))
+
 (defun start-game ()
+  (cffi:define-foreign-library sdl
+    (:darwin (:or (:framework "SDL")
+		  (:default "libSDL")))
+    (:windows "SDL.dll")
+    (:unix (:or "libSDL-1.2.so.0.7.2"
+		"libSDL-1.2.so.0"
+		"libSDL-1.2.so"
+		"libSDL.so"
+		"libSDL")))
+  (read-config)
   (defparameter *the-world* nil)
   (defparameter *title-font* (sdl:initialise-font sdl:*font-10x20*))
   (defparameter *font* (sdl:initialise-font sdl:*font-9x18B*))
   (defparameter *char-height* (sdl:char-height *font*))
   (defparameter *char-width* (sdl:char-width *font*))
-  (defparameter *save-directory* "save/save1.sav")
   (defparameter *screenw* +default-screen-width+)
   (defparameter *screenh* +default-screen-height+)
   
@@ -90,7 +109,7 @@
   ;; start the display
   (sdl:init-image :png)
   (sdl:with-init ()
-    (sdl:window *screenw* *screenh* :title-caption "Sentient Species Reserve Gamma")
+    (sdl:window *screenw* *screenh* :title-caption "Endangered Wildlife Reserve Planet 6")
     (sdl:enable-unicode)
     (setf (sdl:frame-rate) 15)    
     (draw-borders)

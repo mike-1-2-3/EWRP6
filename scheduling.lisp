@@ -184,10 +184,9 @@
 ;;--------------------------------the event queue
 (defun process-ticks-on-load ()
   (let ((old-time (last-played *the-world*)))
-    (print old-time)
-    (let ((ticks (floor (- (get-universal-time) old-time) +seconds-per-tick+ )))
+    (let ((ticks (floor (- (get-universal-time) old-time) *seconds-per-tick* )))
       (process-some-ticks ticks)
-      (incf (last-played *the-world*) (* ticks +seconds-per-tick+)))))
+      (incf (last-played *the-world*) (* ticks *seconds-per-tick*)))))
 
 (defun process-some-ticks (&optional (num +tick-processing-interval+))
   (when (mutex *the-world*)
@@ -214,7 +213,7 @@
   (draw-date))
 
 (defun launch-timer ()
-  (let ((trigger-time (* +seconds-per-tick+ +tick-processing-interval+)))
+  (let ((trigger-time (* *seconds-per-tick* +tick-processing-interval+)))
     (schedule-timer
      (make-timer #'process-some-ticks :name "the-tick-timer")
      trigger-time

@@ -16,7 +16,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 |#
 
-
+(defconstant +tick-processing-interval+ 1)
+(defconstant +map-size+ 100)
+(defconstant +default-screen-width+ 640)
+(defconstant +default-screen-height+ 480)
+(defconstant +tile-size+ 50)
+(defconstant +menu-width+ 210)
+(defconstant +line-spacing+ 2)
 
 (defmacro def-constants (&body body)
   (let ((total (1- (length body)))

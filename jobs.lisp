@@ -316,13 +316,15 @@
       (message "There aren't that many acres of useable land")))
 
 (defun remove-farm (index)
-  (incf (cleared (selected-sector))
-	(quantity (nth index (get-farms))))
-  (if (zerop index)
-      (if (cdr (get-farms))
-	  (setf (farms-list (settlement (selected-sector))) (cdr (get-farms)))
-	  (setf (farms-list (settlement (selected-sector))) nil)))
-  (remove-nth (+ index 1) (cons nil (get-farms))))
+  (if (>= index 0)
+      (progn
+	(incf (cleared (selected-sector))
+	      (quantity (nth index (get-farms))))
+	(if (zerop index)
+	    (if (cdr (get-farms))
+		(setf (farms-list (settlement (selected-sector))) (cdr (get-farms)))
+		(setf (farms-list (settlement (selected-sector))) nil)))
+	(remove-nth (+ index 1) (cons nil (get-farms))))))
 
 (defun calc-plant-suitability (plant place)
   (if (typep plant 'native-plant)

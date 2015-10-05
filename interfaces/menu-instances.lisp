@@ -176,9 +176,9 @@
       (let ((subsubmenu (make-instance 'menu :parent submenu :name "Farms"
 				       :items (plant-instance-array *the-world*)
 				       :child-action #'add-farm)))
-	(push-item subsubmenu (make-instance 'prompt-info :prompt-string "How many?"
+	(push-item subsubmenu (make-instance 'prompt-info :prompt-string "How many acres?"
 					     :input-type 'integer
-					     :trailing-string "acres"))
+					     :trailing-string ""))
 	(push-item submenu subsubmenu)))  
     
     (let ((submenu (make-instance 'menu :parent menu-entry :name "Inventories")))

@@ -22,7 +22,7 @@
    (salt-water :initarg :salt-water :accessor salt-water :initform (error "needs more info"))
    (fresh-water :initarg :fresh-water :accessor fresh-water :initform (error "needs more info"))
    (settlement :initarg :settlement :accessor settlement :initform nil)
-   (player-knowledge :initarg :player-knowledge :accessor player-knowledge :initform +fog-of-war+)
+   (player-knowledge :initarg :player-knowledge :accessor player-knowledge :initform *fog-of-war*)
    (tile-id :initarg :tile-id :accessor tile-id :initform 0)
    (rainfall :initarg :rainfall :accessor rainfall :initform (error "sector needs rainfall"))
    (avg-summer-temp :initarg :avg-summer-temp :accessor avg-summer-temp :initform 0)
@@ -167,7 +167,9 @@
 	       (name (aref (plant-instance-array *the-world*) (species-index item)))
 	       " "
 	       (write-to-string (quantity item))
-	       " acres"))
+	       (if (equalp (quantity item) 1)
+		   " acre"
+		   " acres")))
 
 (defmethod get-name ((item product))
   (name item))

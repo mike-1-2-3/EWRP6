@@ -404,7 +404,7 @@
 			(deaths 1 (first (sentients-list (origin j))) (origin j))
 			"She died a very painful death.")
 		      "And she seems to be fine!")
-		  "A brave voluteer put one in her mouth and chewed."
+		  "A brave volunteer put one in her mouth and chewed."
 		  (concatenate
 	     'string "They show you a pile of "
 	     (description (first (product-list

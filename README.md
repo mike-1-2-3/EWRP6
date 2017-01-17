@@ -1,6 +1,6 @@
-#Endangered Wildlife Reserve Planet 6
+#EWRP 6
 
-A silly idle game I started a couple years ago. Not under active development.
+A silly idle game I started a couple years ago. Not under active development, or worth playing.
 
 ##Requirements for binary
 * SDL 1.2 and SDL image
